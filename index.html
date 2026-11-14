@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Julia Karczyńska — Product Designer</title><meta name="description" content="I design complex B2B workflows and the systems that let teams ship them consistently.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono&display=swap" rel="stylesheet"><style>
+:root{
+  --bg:#FFFAF4;--surface:#FFFFFF;--ink:#2A1517;--muted:#7A5E57;--line:#F2E1D0;
+  --accent:#A5402D;--accent-soft:#FFEBD6;--maroon:#721121;--coral:#F15156;--peach:#FFC07F;--apricot:#FFCF99;
+  --ph:#FFF2E4;--ph-line:#E8B48F;
+  --serif:'Fraunces',Georgia,serif;--sans:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;
+  --wrap:1200px;--gap:clamp(16px,2.2vw,28px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 clamp(20px,5vw,48px)}
+mark.todo{background:#FFE08A;color:inherit;padding:0 2px;border-radius:2px}
+.serif{font-family:var(--serif);font-weight:400;letter-spacing:-.02em;line-height:1.08}
+.label{font:600 13px/1.2 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.label .n{color:var(--accent);margin-right:10px}
+p.label{font-size:13px!important;line-height:1.2!important}
+.muted{color:var(--muted)}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:rgba(255,250,244,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.nav .brand{font:600 15px var(--sans);text-decoration:none}
+.nav .links{display:flex;gap:clamp(12px,2.5vw,28px);align-items:center;font-size:15px}
+.nav .links a{text-decoration:none;color:var(--muted)}
+.nav .links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;font:500 14px var(--sans);padding:8px 14px;border:1px solid var(--line);border-radius:4px;background:var(--surface);cursor:pointer;color:var(--ink);text-decoration:none}
+.btn:hover{border-color:var(--accent)}
+
+/* tags & chips */
+.tag{display:inline-flex;align-items:center;font:600 12px/1.2 var(--sans);letter-spacing:.06em;text-transform:uppercase;padding:6px 10px;border-radius:4px;background:var(--accent-soft);color:var(--accent);width:max-content}
+.tag.ok{background:var(--maroon);color:#fff}
+.tag.no{background:transparent;color:var(--muted);box-shadow:inset 0 0 0 1.5px var(--ph-line)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+
+/* image placeholder */
+.ph{background:var(--ph);border:2px dashed var(--ph-line);border-radius:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:24px;text-align:center;min-height:220px;aspect-ratio:16/10;width:100%}
+.ph .k{font:400 12px var(--mono);letter-spacing:.12em;color:var(--ph-line)}
+.ph .d{font:500 15px/1.4 var(--sans);color:var(--muted);max-width:40ch}
+.ph.video .k::before{content:"▶ "}
+
+/* card */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:clamp(20px,2.4vw,32px);display:flex;flex-direction:column;gap:14px}
+.card h3{font:400 clamp(22px,2.2vw,28px)/1.15 var(--serif);letter-spacing:-.015em}
+.card p{color:var(--muted);font-size:16px}
+.card .ph{min-height:160px}
+
+/* sections */
+section.s{padding:clamp(56px,8vw,112px) 0;border-top:1px solid var(--line)}
+section.s:first-of-type{border-top:none}
+.head{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:clamp(28px,4vw,48px)}
+.head h2{font:400 clamp(32px,4.4vw,56px)/1.08 var(--serif);letter-spacing:-.02em;max-width:22ch}
+.head .lead{color:var(--muted);font-size:18px;max-width:60ch}
+@media(min-width:960px){.head.split{grid-template-columns:1.2fr 1fr;align-items:end;column-gap:64px}.head.split .label{grid-column:1/-1}}
+.grid{display:grid;gap:var(--gap)}
+.g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
+ul.list{list-style:none;display:flex;flex-direction:column;gap:10px}
+ul.list li{padding-left:22px;position:relative}
+ul.list li::before{content:"";position:absolute;left:4px;top:.72em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.ti{display:grid;gap:clamp(28px,5vw,72px);align-items:start}
+@media(min-width:960px){.ti{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}}
+.ti .txt{display:flex;flex-direction:column;gap:18px}
+.ti .txt p{color:var(--muted);font-size:18px}
+.ti h2{font:400 clamp(32px,4vw,52px)/1.08 var(--serif);letter-spacing:-.02em}
+
+/* hero (case) */
+.hero{padding:clamp(48px,8vw,104px) 0 clamp(40px,6vw,72px)}
+.hero .ti{align-items:end}
+.hero h1{font:400 clamp(40px,6vw,80px)/1.04 var(--serif);letter-spacing:-.025em}
+.hero .sub{font-size:clamp(18px,1.8vw,22px);color:var(--muted)}
+.nda{display:flex;gap:10px;align-items:flex-start;background:var(--accent-soft);padding:14px 16px;border-radius:4px;font-size:15px;margin-top:8px}
+
+/* meta + tldr */
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:var(--gap)}
+.meta div{padding:18px 20px 18px 0;display:flex;flex-direction:column;gap:6px}
+.meta dd{font-weight:500;font-size:16px}
+.tldr .card p{color:var(--ink);font-size:18px}
+
+/* pipeline */
+.pipe{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));counter-reset:step}
+.pipe .card{gap:6px;padding:20px}
+.pipe .card .no{font:400 13px var(--mono);color:var(--accent)}
+.pipe .card strong{font-weight:600;font-size:17px}
+.pipe .card p{font-size:15px}
+.pipe + .ph{margin-top:var(--gap)}
+
+/* divider */
+.divider{padding:clamp(80px,12vw,160px) 0}
+.divider .num{font:400 clamp(120px,18vw,220px)/1 var(--serif);color:var(--maroon);letter-spacing:-.03em}
+.divider h2{font:400 clamp(36px,5vw,72px)/1.06 var(--serif);letter-spacing:-.02em;max-width:18ch;margin-top:12px}
+.divider p{color:var(--muted);font-size:20px;margin-top:16px}
+
+/* outcome */
+.metric{justify-content:space-between;min-height:200px}
+.metric .v{font:400 clamp(44px,5vw,72px)/1 var(--serif);color:var(--coral);letter-spacing:-.02em}
+.quote{background:var(--apricot);border-radius:4px;padding:clamp(24px,3vw,40px);margin-top:var(--gap)}
+.quote q{font:400 clamp(24px,2.6vw,36px)/1.25 var(--serif);quotes:none;display:block}
+.quote .who{margin-top:12px;color:var(--ink);opacity:.7;font-size:15px}
+.qcard h3{font-size:clamp(22px,2.2vw,30px)}
+
+/* notes beside big image */
+.bi{display:grid;gap:var(--gap)}
+@media(min-width:960px){.bi.with-notes{grid-template-columns:2fr 1fr}}
+ol.notes{list-style:none;display:flex;flex-direction:column;gap:20px;counter-reset:n}
+ol.notes li{counter-increment:n;display:grid;grid-template-columns:36px 1fr;gap:14px;font-size:17px}
+ol.notes li::before{content:counter(n);width:32px;height:32px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font:600 14px var(--sans)}
+
+/* states grid */
+.state .ph{min-height:120px;aspect-ratio:4/3}
+.state strong{font-size:16px}
+.state p{font-size:14px}
+
+/* home */
+.intro{padding:clamp(64px,10vw,140px) 0 clamp(40px,6vw,64px)}
+.intro h1{font:400 clamp(40px,6.4vw,84px)/1.04 var(--serif);letter-spacing:-.025em;max-width:20ch;margin-top:20px}
+.facts{display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,64px);margin-top:36px}
+.facts div{display:flex;flex-direction:column;gap:6px}
+.facts dd{font-weight:500}
+.work{display:grid;gap:var(--gap);grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr))}
+.wcard{text-decoration:none;padding:16px 16px 24px}
+.wcard:hover{border-color:var(--accent)}
+.wcard .ph{min-height:200px}
+.wcard h3{font:400 28px/1.15 var(--serif)}
+.about{display:grid;gap:clamp(28px,5vw,72px)}
+@media(min-width:960px){.about{grid-template-columns:minmax(0,4fr) minmax(0,7fr)}}
+.about > .ph{aspect-ratio:4/5}
+.about p{font-size:19px}
+.about p + p{color:var(--muted);font-size:17px}
+.contact{display:flex;flex-wrap:wrap;gap:12px}
+footer{border-top:1px solid var(--line);padding:32px 0 48px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.next{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.next a.serif{font-size:clamp(26px,3vw,40px);text-decoration:none}
+
+/* ---------- presentation mode ---------- */
+.present-hint{position:fixed;right:16px;bottom:16px;z-index:30;font:500 13px var(--sans);background:var(--ink);color:#fff;padding:8px 12px;border-radius:4px;display:none}
+body.present .nav, body.present footer, body.present .next-wrap{display:none}
+body.present{overflow:hidden}
+body.present main{height:100vh;overflow-y:auto;scroll-snap-type:y mandatory}
+body.present main > section{min-height:100vh;scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center;border-top:none;padding:48px 0}
+body.present .present-hint{display:block}
+@media(max-width:700px){#present{display:none}}
+@media print{.nav,.present-hint,.btn{display:none} section.s{break-inside:avoid}}
+</style></head>
+<body>
+<header class="nav"><div class="wrap"><a class="brand" href="index.html">Julia Karczyńska</a>
+</div></header>
+<main tabindex="-1"><section class="intro"><div class="wrap"><p class="label" style="color:var(--accent)">Julia Karczyńska · Product Designer</p>
+<h1>I design complex B2B workflows and the systems that let teams ship them consistently.</h1>
+<div class="nda" style="max-width:60ch;margin-top:36px"><span>🔒</span><span>Case studies are password-protected because of confidentiality agreements. <strong>The password is in my CV.</strong></span></div>
+<div class="contact" style="margin-top:28px"><a class="btn" href="work.html" style="background:var(--maroon);border-color:var(--maroon);color:#fff">Open portfolio →</a><span class="btn">Email: <mark class="todo">[email]</mark></span><span class="btn">LinkedIn: <mark class="todo">[linkedin url]</mark></span></div>
+</div></section></main>
+<footer><div class="wrap"><span>© 2026 Julia Karczyńska</span><span>Designed in Figma, built with Claude Code</span></div></footer>
+<div class="present-hint" aria-hidden="true">← → to move · Esc to exit</div>
+<script>
+(function(){
+  var btn=document.getElementById('present');
+  var main=document.querySelector('main');
+  function secs(){return [].slice.call(main.children).filter(function(n){return n.tagName==='SECTION'});}
+  function cur(){var s=secs(),t=main.scrollTop+10,i=0;s.forEach(function(x,k){if(x.offsetTop<=t)i=k});return i;}
+  function go(d){var s=secs(),i=Math.max(0,Math.min(s.length-1,cur()+d));main.scrollTo({top:s[i].offsetTop,behavior:'smooth'});}
+  function toggle(on){document.body.classList.toggle('present',on);if(on){main.scrollTop=0;main.focus();}}
+  if(btn)btn.addEventListener('click',function(){toggle(true)});
+  document.addEventListener('keydown',function(e){
+    var on=document.body.classList.contains('present');
+    if(e.target.tagName==='INPUT')return;
+    if(!on&&(e.key==='p'||e.key==='P')){toggle(true);return;}
+    if(!on)return;
+    if(e.key==='Escape'){toggle(false);}
+    else if(['ArrowDown','ArrowRight','PageDown',' '].indexOf(e.key)>-1){e.preventDefault();go(1);}
+    else if(['ArrowUp','ArrowLeft','PageUp'].indexOf(e.key)>-1){e.preventDefault();go(-1);}
+  });
+})();
+</script></body></html>
