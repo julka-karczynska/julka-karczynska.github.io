@@ -73,6 +73,9 @@ section.s:first-of-type{border-top:none}
 .grid{display:grid;gap:var(--gap)}
 .g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))}
 .g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))}
+.pair{grid-template-columns:1fr 1fr}
+.pair .shot{aspect-ratio:4/3;object-fit:contain;background:var(--ph)}
+@media(max-width:600px){.pair{grid-template-columns:1fr}}
 .g4{grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
 ul.list{list-style:none;display:flex;flex-direction:column;gap:10px}
 ul.list li{padding-left:22px;position:relative}
