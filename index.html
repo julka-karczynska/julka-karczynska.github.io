@@ -104,6 +104,7 @@ ul.list li::before{content:"";position:absolute;left:4px;top:.72em;width:6px;hei
 
 /* pipeline */
 .pipe{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));counter-reset:step}
+.pipe+.shot,.pipe+.ph{margin-top:clamp(24px,3.5vw,44px)}
 .pipe .card{gap:6px;padding:20px}
 .pipe .card .no{font:400 13px var(--mono);color:var(--accent)}
 .pipe .card strong{font-weight:600;font-size:17px}
